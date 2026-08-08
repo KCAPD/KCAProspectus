@@ -121,3 +121,18 @@ document.querySelectorAll('.characters figure').forEach(f=>{
 });
 document.querySelector('.modal-close')?.addEventListener('click',()=>document.getElementById('character-modal').hidden=true);
 document.getElementById('character-modal')?.addEventListener('click',e=>{if(e.target.id==='character-modal')e.currentTarget.hidden=true});
+
+// V3.8 timetable lightbox
+const timetableModal=document.getElementById('timetable-modal');
+document.querySelector('.timetable-enlarge')?.addEventListener('click',()=>{
+  if(timetableModal) timetableModal.hidden=false;
+});
+document.querySelector('.timetable-modal-close')?.addEventListener('click',()=>{
+  if(timetableModal) timetableModal.hidden=true;
+});
+timetableModal?.addEventListener('click',e=>{
+  if(e.target===timetableModal) timetableModal.hidden=true;
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape' && timetableModal && !timetableModal.hidden) timetableModal.hidden=true;
+});

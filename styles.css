@@ -341,3 +341,235 @@
 @media(max-width:760px){
   .destination-evidence-panel{padding:20px;border-radius:20px;margin-top:30px}
 }
+
+/* V3.8 — mobile optimisation pass */
+
+/* 1. Top three pathway prompts in one line on mobile */
+@media(max-width:800px){
+  .hero-questions,
+  .journey-questions,
+  .question-links,
+  .hero .question-row{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:8px!important;
+    overflow:visible!important;
+  }
+  .hero-questions>*,
+  .journey-questions>*,
+  .question-links>*,
+  .hero .question-row>*{
+    min-width:0!important;
+    width:auto!important;
+    padding-left:8px!important;
+    padding-right:8px!important;
+    font-size:.82rem!important;
+    line-height:1.15!important;
+    white-space:normal!important;
+    text-align:center!important;
+  }
+}
+
+/* 2. Curriculum headline must fit naturally on a phone */
+@media(max-width:800px){
+  #learn h2,
+  .curriculum h2,
+  .curriculum-section h2{
+    font-size:clamp(2.2rem,10.5vw,3.8rem)!important;
+    line-height:.98!important;
+    letter-spacing:-.045em!important;
+    max-width:100%!important;
+    overflow-wrap:anywhere;
+  }
+}
+
+/* 3. Experience year-group tabs: wrapped, no horizontal scrolling, max 3 per row */
+@media(max-width:800px){
+  .year-tabs{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:8px!important;
+    overflow:visible!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding:0 0 14px!important;
+    position:static!important;
+    background:none!important;
+  }
+  .year-tab{
+    width:100%!important;
+    padding:10px 7px!important;
+    font-size:.82rem!important;
+    white-space:normal!important;
+    text-align:center!important;
+  }
+}
+@media(max-width:430px){
+  .year-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+/* 4. Values: exactly 3 per row, two rows on mobile */
+@media(max-width:800px){
+  .characters,
+  .values-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;
+    overflow:visible!important;
+  }
+  .characters figure,
+  .values-grid>*{
+    min-width:0!important;
+    width:auto!important;
+    margin:0!important;
+  }
+  .characters figure img{width:100%!important;height:auto!important}
+  .characters figcaption{font-size:.82rem!important}
+  .characters .meet{
+    width:100%!important;
+    margin:8px 0 0!important;
+    padding:8px 6px!important;
+    font-size:.72rem!important;
+    white-space:normal!important;
+  }
+}
+
+/* 5. Personal-development year selector: 2 per line, no horizontal scrolling */
+@media(max-width:800px){
+  .pd-tabs,
+  .personal-tabs,
+  .personal-development .year-tabs,
+  #become .year-tabs{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    overflow:visible!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .pd-tabs>*,
+  .personal-tabs>*,
+  .personal-development .year-tabs>*,
+  #become .year-tabs>*{
+    min-width:0!important;
+    width:100%!important;
+    white-space:normal!important;
+  }
+}
+
+/* 6. Weekly timetable: fit the phone width and enlarge in a modal */
+@media(max-width:650px){
+  .timetable-image-link{
+    display:block!important;
+    width:100%!important;
+    max-height:none!important;
+    overflow:hidden!important;
+    border:0;
+    padding:0;
+    background:none;
+    cursor:zoom-in;
+  }
+  .timetable-image-link img{
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+  }
+  .timetable-tip{display:block!important}
+}
+.timetable-modal{
+  position:fixed; inset:0; z-index:120;
+  background:rgba(0,0,0,.78);
+  display:grid; place-items:center;
+  padding:18px;
+}
+.timetable-modal[hidden]{display:none}
+.timetable-modal-card{
+  position:relative;
+  width:min(96vw,1100px);
+  max-height:94vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:18px;
+  padding:14px;
+}
+.timetable-modal-card img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.timetable-modal-close{
+  position:sticky;
+  top:0;
+  float:right;
+  z-index:2;
+  border:0;
+  background:#172033;
+  color:#fff;
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* 7. Secondary destinations: two per row on mobile */
+@media(max-width:760px){
+  .destination-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+  }
+  .destination-grid article{
+    min-height:145px!important;
+    padding:18px!important;
+  }
+  .destination-grid strong{font-size:2.7rem!important}
+  .destination-grid span{font-size:.92rem!important;max-width:100%!important}
+}
+
+/* 8. Quotes/evidence: two per row, no sideways scrolling */
+@media(max-width:900px){
+  .evidence-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    overflow:visible!important;
+    margin:32px 0 0!important;
+    padding:0!important;
+  }
+  .evidence-grid .evidence-card{
+    min-width:0!important;
+    width:auto!important;
+    min-height:300px!important;
+    padding:18px!important;
+  }
+  .evidence-grid .evidence-card blockquote{
+    font-size:1.15rem!important;
+    line-height:1.15!important;
+  }
+  .evidence-grid .evidence-card p{font-size:.88rem!important}
+}
+@media(max-width:430px){
+  .evidence-grid .evidence-card{min-height:270px!important}
+}
+
+/* 9. External validation: two per row, no sideways scrolling */
+@media(max-width:650px){
+  .recognition-badges{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    overflow:visible!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .recognition-badge{
+    min-width:0!important;
+    width:auto!important;
+    min-height:220px!important;
+    padding:14px!important;
+  }
+  .logo-stage{height:100px!important}
+  .logo-stage img{max-height:86px!important}
+  .recognition-badge strong{font-size:.92rem!important}
+  .recognition-badge span{font-size:.82rem!important}
+}

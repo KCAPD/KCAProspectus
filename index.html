@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Discover King's Cross Academy</title>
-<link rel="stylesheet" href="styles.css?v=3.7">
+<link rel="stylesheet" href="styles.css?v=3.8">
 </head>
 <body>
 <header class="top">
@@ -333,10 +333,10 @@
         <div><p class="eyebrow red">Autumn 2026</p><h3>A week at KCA</h3></div>
         <a class="button" href="https://kingscrossacademy.org.uk/parents/the-co-curriculum" target="_blank" rel="noopener">Explore the co-curriculum</a>
       </div>
-      <a class="timetable-image-link" href="assets/clubs-timetable.png" target="_blank" aria-label="Open the Autumn 2026 clubs timetable at full size">
+      <button class="timetable-image-link timetable-enlarge" type="button" aria-label="Enlarge the Autumn 2026 clubs timetable">
         <img src="assets/clubs-timetable.png" alt="King's Cross Academy Autumn 2026 weekly co-curricular clubs timetable">
-      </a>
-      <p class="timetable-tip">On a phone, tap the timetable to open it at full size.</p>
+      </button>
+      <p class="timetable-tip">Tap the timetable to enlarge.</p>
     </div>
   </div>
 </section>
@@ -449,7 +449,13 @@
     <div class="actions"><a class="button" href="https://kingscrossacademy.org.uk/school-tours">Book a school tour</a><a class="button ghost" href="https://kingscrossacademy.org.uk/admissions">Admissions</a></div>
   </div>
 </section>
-<div class="character-modal" id="character-modal" hidden><div class="modal-card"><button class="modal-close" aria-label="Close">×</button><img id="modal-img"><p class="eyebrow red" id="modal-value"></p><h2 id="modal-name"></h2><p id="modal-story"></p></div></div></main>
+<div class="character-modal" id="character-modal" hidden><div class="modal-card"><button class="modal-close" aria-label="Close">×</button><img id="modal-img"><p class="eyebrow red" id="modal-value"></p><h2 id="modal-name"></h2><p id="modal-story"></p></div></div><div class="timetable-modal" id="timetable-modal" hidden>
+  <div class="timetable-modal-card">
+    <button class="timetable-modal-close" type="button" aria-label="Close timetable">×</button>
+    <img src="assets/clubs-timetable.png" alt="King's Cross Academy Autumn 2026 weekly co-curricular clubs timetable">
+  </div>
+</div>
+</main>
 
 <a class="mobile-tour" href="https://kingscrossacademy.org.uk/school-tours">Book a tour</a>
 <section id="faq" class="faq-section">
@@ -472,5 +478,5 @@
 </section>
 
 <footer><img src="assets/logo.png" alt=""><span>King's Cross Academy · Love Learning Together</span></footer>
-<script src="script.js?v=3.7"></script>
+<script src="script.js?v=3.8"></script>
 </body></html>
