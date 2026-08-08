@@ -573,3 +573,121 @@
   .recognition-badge strong{font-size:.92rem!important}
   .recognition-badge span{font-size:.82rem!important}
 }
+
+/* V3.9 — iPhone viewport + experience-section repair */
+
+/* Global viewport repair */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body, main, header, footer, section {
+  box-sizing: border-box;
+}
+main, section, .hero, .site-header, .site-footer {
+  width: 100%;
+  max-width: 100%;
+}
+.wrap {
+  width: min(100% - 40px, 1180px);
+  margin-left: auto;
+  margin-right: auto;
+}
+img, video, iframe {
+  max-width: 100%;
+}
+
+/* Mobile hero/content width */
+@media(max-width:800px){
+  .site-header,
+  .hero,
+  main,
+  section,
+  footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  .wrap {
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .hero {
+    margin: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .hero-inner,
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Slightly reduce oversized first content headline */
+  .intro h2,
+  .opening h2,
+  .story h2 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem) !important;
+    line-height: 1.02 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Experience section: no single-row cards on phones */
+@media(max-width:800px){
+  .journey-grid,
+  .experience-grid,
+  .experiences-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    width: 100% !important;
+  }
+
+  .journey-card,
+  .experience-card {
+    min-width: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
+    scroll-snap-align: unset !important;
+  }
+
+  .journey-card h3,
+  .experience-card h3 {
+    font-size: 1rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .journey-card p,
+  .experience-card p {
+    font-size: .84rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .journey-card small,
+  .experience-card small {
+    font-size: .7rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .journey-icon {
+    font-size: 1.7rem !important;
+  }
+}
+
+/* Very narrow phones: keep experience cards readable */
+@media(max-width:390px){
+  .journey-grid,
+  .experience-grid,
+  .experiences-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
