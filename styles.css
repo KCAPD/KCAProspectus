@@ -120,3 +120,27 @@
  .experience-grid{grid-template-columns:1fr}
  .journey-card,.journey-card.feature{min-height:235px}
 }
+
+/* V2.6 editorial alignment + mobile refinement */
+.journey-intro{text-align:left}
+.journey-intro .lead{margin-left:0;margin-right:0;max-width:880px}
+.journey-intro h2{max-width:900px}
+.journey-prompt{text-align:left}
+.year-summary{text-align:left}
+.experience-frame{text-align:left}
+.journey-card{text-align:left}
+.selection-label{display:block;text-transform:uppercase;letter-spacing:.12em;color:#e52735;font-size:.72rem;font-weight:900;margin-bottom:7px}
+.journey-footer>div{max-width:700px}
+@media(max-width:800px){
+ .journey-intro{text-align:left}
+ .journey-intro .lead{font-size:1.08rem}
+ .experience-frame{padding:18px 14px}
+ .year-summary{padding-bottom:10px}
+ .year-summary h3{font-size:2rem}
+ .year-summary p{font-size:1rem}
+ .experience-grid{grid-template-columns:1fr}
+ .journey-card,.journey-card.feature{min-height:0;height:auto;padding:18px}
+ .journey-card p{font-size:.92rem}
+ .journey-footer{padding-top:22px}
+ .journey-footer .button{width:100%;text-align:center}
+}
