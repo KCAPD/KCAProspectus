@@ -25,3 +25,9 @@
  .experience-map{display:block;padding:0 22px}.map-canvas{min-height:430px}.map-detail{margin-top:12px;padding:25px}.map-pin b{display:none}.map-pin{padding:8px;border-radius:999px}.map-pin span{font-size:1.1rem}.map-label{font-size:.9rem}.map-label b{font-size:1.1rem}
  .mobile-experiences{display:block;padding-top:38px;padding-bottom:0}.experience-strip{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;padding-bottom:12px}.experience-strip article{min-width:82vw;scroll-snap-align:center;background:#fff;border-radius:20px;padding:24px}.experience-strip b,.experience-strip span{display:block}.experience-strip b{font-size:1.35rem}.experience-strip span{color:#e52735;font-weight:900;font-size:.8rem;margin:5px 0 12px}
 }
+
+.map-section-title{padding-top:0;padding-bottom:18px}
+.map-section-title span{display:block;color:#e52735;font-size:.72rem;font-weight:900;letter-spacing:.14em}
+.map-section-title h3{margin:.25em 0 0;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.05}
+.map-canvas{isolation:isolate}
+.map-canvas .map-pin{visibility:visible;opacity:1}

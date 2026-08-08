@@ -12,8 +12,12 @@ const pins=document.querySelectorAll('.map-pin');
 pins.forEach(btn=>btn.addEventListener('click',()=>{
  pins.forEach(p=>p.classList.remove('active'));btn.classList.add('active');
  const d=places[btn.dataset.place]; if(!d)return;
- document.getElementById('map-kicker').textContent=d.k;
- document.getElementById('map-title').textContent=d.t;
- document.getElementById('map-text').textContent=d.x;
- document.getElementById('map-tags').innerHTML=d.tags.map(t=>`<span>${t}</span>`).join('');
+ const kicker=document.getElementById('map-kicker');
+ const title=document.getElementById('map-title');
+ const text=document.getElementById('map-text');
+ const tags=document.getElementById('map-tags');
+ if(kicker) kicker.textContent=d.k;
+ if(title) title.textContent=d.t;
+ if(text) text.textContent=d.x;
+ if(tags) tags.innerHTML=d.tags.map(t=>`<span>${t}</span>`).join('');
 }));

@@ -1,8 +1,8 @@
-KCA Digital Prospectus V2.1
+KCA Digital Prospectus V2.2
 
-Changes from V2:
-1. Curriculum section now foregrounds Big Questions and uses genuine KCA examples.
-2. 'More than a postcode' now includes a prototype interactive illustrated King's Cross experience map.
-3. Mobile receives a simplified map plus swipeable neighbourhood experience cards.
+Fix from V2.1:
+- The interactive map code was present in V2.1.
+- CSS and JS retained the same filenames as V2, so GitHub Pages / the browser could reuse cached V2 assets.
+- V2.2 cache-busts both files with ?v=2.2 and adds an explicit map heading and more resilient JS.
 
-The map is intentionally an illustrated experience map, not a geographically precise street map.
+Upload/replace index.html, styles.css and script.js together (plus existing assets).
