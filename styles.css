@@ -309,3 +309,7 @@
  .destination-breadth{align-items:flex-start;flex-direction:column;gap:8px}
  .faq-anchor{font-size:clamp(2.5rem,12vw,4rem)}
 }
+
+/* V3.4 final hierarchy refinements */
+.destinations h2{max-width:980px;margin-bottom:26px}
+.destination-intro{margin-top:0}
