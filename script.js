@@ -52,53 +52,75 @@ const yearCopy={
 const yearTabs=document.querySelectorAll('.year-tab');
 const journeyCards=document.querySelectorAll('.journey-card');
 const experienceToggle=document.getElementById('experience-mobile-toggle');
+const experienceGrid=document.querySelector('.experience-grid');
 let experienceExpanded=false;
 
+function getEligibleExperienceCards(){
+  return [...journeyCards].filter(card=>!card.classList.contains('is-hidden'));
+}
+
 function applyMobileExperienceLimit(){
- const isMobile=window.matchMedia('(max-width:800px)').matches;
- const eligible=[...journeyCards].filter(card=>!card.classList.contains('is-hidden'));
- journeyCards.forEach(card=>card.classList.remove('mobile-truncated'));
+  const isMobile=window.matchMedia('(max-width:800px)').matches;
+  const eligible=getEligibleExperienceCards();
 
- if(!isMobile){
-   experienceToggle?.classList.add('is-unneeded');
-   return;
- }
+  // Clear any previous mobile-only hiding before recalculating.
+  journeyCards.forEach(card=>card.classList.remove('mobile-truncated'));
 
- const needsToggle=eligible.length>6;
- experienceToggle?.classList.toggle('is-unneeded',!needsToggle);
+  if(!experienceToggle) return;
 
- if(needsToggle && !experienceExpanded){
-   eligible.slice(6).forEach(card=>card.classList.add('mobile-truncated'));
- }
- if(experienceToggle){
-   experienceToggle.setAttribute('aria-expanded',String(experienceExpanded));
-   experienceToggle.textContent=experienceExpanded?'Show fewer experiences':'Show more experiences';
- }
+  if(!isMobile || eligible.length<=6){
+    experienceToggle.classList.add('is-unneeded');
+    experienceToggle.setAttribute('aria-expanded','true');
+    return;
+  }
+
+  experienceToggle.classList.remove('is-unneeded');
+
+  if(!experienceExpanded){
+    eligible.slice(6).forEach(card=>card.classList.add('mobile-truncated'));
+  }
+
+  experienceToggle.setAttribute('aria-expanded',String(experienceExpanded));
+  experienceToggle.textContent=experienceExpanded
+    ? 'Show fewer experiences'
+    : `Show more experiences (${eligible.length-6})`;
 }
 
 experienceToggle?.addEventListener('click',()=>{
- experienceExpanded=!experienceExpanded;
- applyMobileExperienceLimit();
+  experienceExpanded=!experienceExpanded;
+  applyMobileExperienceLimit();
+
+  if(!experienceExpanded && experienceGrid){
+    experienceGrid.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 });
 
 yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
- yearTabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-pressed','false')});
- tab.classList.add('active');tab.setAttribute('aria-pressed','true');
- const year=tab.dataset.year;
- journeyCards.forEach(card=>{
-   const years=(card.dataset.years||'').split(/\s+/);
-   const show=year==='all' || years.includes(year);
-   card.classList.toggle('is-hidden',!show);
- });
- experienceExpanded=false;
- applyMobileExperienceLimit();
- const d=yearCopy[year]||yearCopy.all;
- const kicker=document.querySelector('.year-summary-kicker');
- const title=document.getElementById('journey-title');
- const copy=document.getElementById('journey-copy');
- if(kicker) kicker.textContent=d[0];
- if(title) title.textContent=d[1];
- if(copy) copy.textContent=d[2];
+  yearTabs.forEach(t=>{
+    t.classList.remove('active');
+    t.setAttribute('aria-pressed','false');
+  });
+
+  tab.classList.add('active');
+  tab.setAttribute('aria-pressed','true');
+
+  const year=tab.dataset.year;
+  journeyCards.forEach(card=>{
+    const years=(card.dataset.years||'').split(/\s+/);
+    const show=year==='all' || years.includes(year);
+    card.classList.toggle('is-hidden',!show);
+  });
+
+  experienceExpanded=false;
+  applyMobileExperienceLimit();
+
+  const d=yearCopy[year]||yearCopy.all;
+  const kicker=document.querySelector('.year-summary-kicker');
+  const title=document.getElementById('journey-title');
+  const copy=document.getElementById('journey-copy');
+  if(kicker) kicker.textContent=d[0];
+  if(title) title.textContent=d[1];
+  if(copy) copy.textContent=d[2];
 }));
 
 window.addEventListener('resize',applyMobileExperienceLimit);
