@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Discover King's Cross Academy</title>
-<link rel="stylesheet" href="styles.css?v=2.6">
+<link rel="stylesheet" href="styles.css?v=2.7">
 </head>
 <body>
 <header class="top">
@@ -214,12 +214,12 @@
     <h2>Character is taught, practised and lived.</h2>
     <p class="lead light">Our six values are not decoration. They shape our curriculum, relationships and expectations — giving children a shared language for the person they are becoming.</p>
     <div class="characters">
-      <figure><img src="assets/courage.png"><figcaption><b>Connor</b><span>Courage</span></figcaption></figure>
-      <figure><img src="assets/respect.png"><figcaption><b>Riley</b><span>Respect</span></figcaption></figure>
-      <figure><img src="assets/kindness.png"><figcaption><b>Kiki & Kofi</b><span>Kindness</span></figcaption></figure>
-      <figure><img src="assets/integrity.png"><figcaption><b>Isaac</b><span>Integrity</span></figcaption></figure>
-      <figure><img src="assets/endurance.png"><figcaption><b>Eli</b><span>Endurance</span></figcaption></figure>
-      <figure><img src="assets/aspiration.png"><figcaption><b>Aria</b><span>Aspiration</span></figcaption></figure>
+      <figure><img src="assets/courage.png"><figcaption><b>Connor</b><span>Courage</span></figcaption><button class="meet">Meet this character →</button></figure>
+      <figure><img src="assets/respect.png"><figcaption><b>Riley</b><span>Respect</span></figcaption><button class="meet">Meet this character →</button></figure>
+      <figure><img src="assets/kindness.png"><figcaption><b>Kiki & Kofi</b><span>Kindness</span></figcaption><button class="meet">Meet this character →</button></figure>
+      <figure><img src="assets/integrity.png"><figcaption><b>Isaac</b><span>Integrity</span></figcaption><button class="meet">Meet this character →</button></figure>
+      <figure><img src="assets/endurance.png"><figcaption><b>Eli</b><span>Endurance</span></figcaption><button class="meet">Meet this character →</button></figure>
+      <figure><img src="assets/aspiration.png"><figcaption><b>Aria</b><span>Aspiration</span></figcaption><button class="meet">Meet this character →</button></figure>
     </div>
   </div>
 </section>
@@ -248,20 +248,15 @@
   </div>
 </section>
 
-<section id="achieve" class="performance">
-  <div class="wrap">
-    <p class="eyebrow">How will we know they are thriving?</p>
-    <h2>Ambition you can see in the outcomes.</h2>
-    <p class="lead light">We are proud of the achievements of our pupils and equally clear about where we are still improving. Our latest picture shows strong early foundations, outstanding phonics, improving multiplication outcomes and developing strength in reading and writing at Key Stage 2.</p>
-    <div class="outcomes">
-      <article><strong>Early Years</strong><p>Children leave Reception well prepared for learning, with outcomes above local and national expectations.</p></article>
-      <article><strong>Phonics</strong><p>Year 1 outcomes have been significantly higher than local and national figures for two consecutive years.</p></article>
-      <article><strong>Year 4</strong><p>Multiplication outcomes continue to improve year on year.</p></article>
-      <article><strong>KS2</strong><p>Reading and writing have shown substantial improvement, while strengthening maths remains a clear school priority.</p></article>
-    </div>
-    <a class="button white" href="https://kcapd.github.io/KCAPerformanceandOutcomes/">Explore Performance & Outcomes</a>
-  </div>
-</section>
+<section id="achieve" class="performance"><div class="wrap">
+<p class="eyebrow">How do we know it’s working?</p><h2>Ambition you can see in the outcomes.</h2>
+<p class="lead light">At King’s Cross Academy, high expectations and inclusion go hand in hand. Our outcomes are one way we see the impact of that ambition — from the strong foundations children build at the beginning of their school journey to the results they achieve as they prepare for secondary school.</p>
+<div class="outcomes two">
+<article><strong>A strong start in Reception</strong><p>Our Early Years outcomes are <b>above the national average</b>, showing that children leave Reception with strong foundations for the next stage of their learning.</p></article>
+<article><strong>Strong outcomes at the end of Year 6</strong><p>In 2026, our Key Stage 2 pupils achieved <b>above the national average across all expected-standard measures</b>, with the proportion achieving the combined expected standard <b>10 percentage points above national</b>.</p></article>
+</div><p class="light outcome-note">We also look carefully at outcomes over time, the achievement of different groups and the progress children make from their individual starting points. Our ambition is simple: <strong>every child achieving as strongly as possible.</strong></p>
+<a class="button white" href="https://kcapd.github.io/KCAPerformanceandOutcomes/">Explore our Performance &amp; Outcomes</a>
+</div></section>
 
 <section class="improve wrap">
   <div>
@@ -305,9 +300,9 @@
     <div class="actions"><a class="button" href="https://kingscrossacademy.org.uk/school-tours">Book a school tour</a><a class="button ghost" href="https://kingscrossacademy.org.uk/admissions">Admissions</a></div>
   </div>
 </section>
-</main>
+<div class="character-modal" id="character-modal" hidden><div class="modal-card"><button class="modal-close" aria-label="Close">×</button><img id="modal-img"><p class="eyebrow red" id="modal-value"></p><h2 id="modal-name"></h2><p id="modal-story"></p></div></div></main>
 
 <a class="mobile-tour" href="https://kingscrossacademy.org.uk/school-tours">Book a tour</a>
 <footer><img src="assets/logo.png" alt=""><span>King's Cross Academy · Love Learning Together</span></footer>
-<script src="script.js?v=2.6"></script>
+<script src="script.js?v=2.7"></script>
 </body></html>

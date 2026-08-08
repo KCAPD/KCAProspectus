@@ -68,3 +68,22 @@ yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
  if(title) title.textContent=d[1];
  if(copy) copy.textContent=d[2];
 }));
+
+const characterStories={
+ Connor:["Courage","Connor","Finding and using my voice.","assets/courage.png"],
+ Riley:["Respect","Riley","Belonging and understanding others.","assets/respect.png"],
+ "Kiki & Kofi":["Kindness","Kiki & Kofi","Caring for others and making a positive difference.","assets/kindness.png"],
+ Isaac:["Integrity","Isaac","Making good choices and doing the right thing.","assets/integrity.png"],
+ Eli:["Endurance","Eli","Keeping going when things are difficult.","assets/endurance.png"],
+ Aria:["Aspiration","Aria","Exploring my future and my passions.","assets/aspiration.png"]
+};
+document.querySelectorAll('.characters figure').forEach(f=>{
+ const name=f.querySelector('figcaption b')?.textContent.trim(), btn=f.querySelector('.meet');
+ if(btn) btn.textContent=`Meet ${name} →`;
+ btn?.addEventListener('click',()=>{const d=characterStories[name];if(!d)return;
+ document.getElementById('modal-value').textContent=d[0];document.getElementById('modal-name').textContent=d[1];
+ document.getElementById('modal-story').textContent=d[2];document.getElementById('modal-img').src=d[3];
+ document.getElementById('character-modal').hidden=false;});
+});
+document.querySelector('.modal-close')?.addEventListener('click',()=>document.getElementById('character-modal').hidden=true);
+document.getElementById('character-modal')?.addEventListener('click',e=>{if(e.target.id==='character-modal')e.currentTarget.hidden=true});
