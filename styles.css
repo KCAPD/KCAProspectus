@@ -151,3 +151,44 @@
 .character-modal{position:fixed;inset:0;background:#000a;z-index:100;display:grid;place-items:center;padding:20px}.character-modal[hidden]{display:none}.modal-card{background:white;border-radius:26px;padding:30px;max-width:560px;width:100%;max-height:90vh;overflow:auto;position:relative}.modal-card img{width:170px;float:right}.modal-card h2{font-size:2.6rem;margin:.1em 0}.modal-close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:2rem;cursor:pointer}
 .outcomes.two{grid-template-columns:repeat(2,1fr)}.outcomes.two article{padding:34px}.outcome-note{max-width:850px;margin:0 0 30px}
 @media(max-width:800px){.curriculum-flow{margin-right:-22px;padding-right:22px}.curriculum-flow b,.curriculum-flow i{flex:none}.modal-card{max-height:94vh;padding:24px}.modal-card img{float:none;width:130px}.outcomes.two{display:grid;grid-template-columns:1fr;margin-left:0;margin-right:0}.outcomes.two article{min-width:0}}
+
+/* V2.8 character stories + evidence wall */
+.evidence-wall .lead{max-width:900px}
+.evidence-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:48px}
+.evidence-card{background:#fff;color:#172033;border-radius:22px;padding:28px;min-height:280px;display:flex;flex-direction:column}
+.evidence-card.ofsted{grid-column:span 6}
+.evidence-card.iqm{grid-column:span 6}
+.evidence-card.camden{grid-column:span 5}
+.evidence-card.pupil{grid-column:span 7;background:#e52735;color:#fff}
+.evidence-card.parent-text{grid-column:span 6}
+.evidence-card.parent-image{grid-column:span 6;padding:0;overflow:hidden;background:#fff}
+.evidence-card.parent-image img{width:100%;height:100%;object-fit:cover;display:block}
+.evidence-source{text-transform:uppercase;letter-spacing:.12em;font-weight:900;font-size:.72rem;color:#e52735}
+.evidence-card.pupil .evidence-source{color:#fff8}
+.evidence-card blockquote{margin:16px 0 18px;font-size:clamp(1.45rem,2.5vw,2.4rem);line-height:1.08;font-weight:800}
+.evidence-card p{margin-top:auto}
+.evidence-card small{display:block;margin-top:18px;font-weight:800;color:#6b7280}
+.evidence-card.pupil small{color:#fff}
+.recognition-strip{margin-top:30px;background:#fff;color:#172033;border-radius:24px;padding:30px}
+.recognition-copy h3{font-size:2rem;line-height:1.05;margin:.2em 0 1em}
+.recognition-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.recognition-badge{border:2px solid #d9dde3;border-radius:18px;padding:20px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+.recognition-badge strong{font-size:1.05rem}.recognition-badge span{display:block;color:#e52735;font-weight:900;margin-top:14px}
+.recognition-badge.silver span{color:#68707c}
+.recognition-note{font-size:.85rem;color:#6b7280;margin:18px 0 0}
+.modal-card{max-width:720px}
+.modal-card #modal-story{white-space:pre-line;font-size:1.02rem;line-height:1.62}
+.modal-card img{width:220px;max-height:290px;object-fit:contain;margin:0 0 16px 20px}
+@media(max-width:900px){
+ .evidence-card.ofsted,.evidence-card.iqm,.evidence-card.camden,.evidence-card.pupil,.evidence-card.parent-text,.evidence-card.parent-image{grid-column:span 12}
+ .recognition-badges{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+ .evidence-grid{display:flex;overflow-x:auto;gap:12px;margin-left:-22px;margin-right:-22px;padding:0 22px 14px;scroll-snap-type:x mandatory}
+ .evidence-card{min-width:84vw;scroll-snap-align:center;min-height:340px}
+ .evidence-card.parent-image{min-height:500px}
+ .recognition-strip{padding:22px}
+ .recognition-badges{grid-template-columns:1fr}
+ .modal-card #modal-story{font-size:.98rem}
+ .modal-card img{width:150px;max-height:200px;margin:0 auto 10px;display:block}
+}

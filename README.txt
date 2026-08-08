@@ -1,7 +1,10 @@
-KCA Digital Prospectus V2.6
+KCA Digital Prospectus V2.8
 
-Changes:
-- Restored the locked Big Questions curriculum copy and Curiosity → Big Questions → Knowledge → Connection → Purpose sequence.
-- Experience section body copy is now left-aligned for cleaner editorial reading.
-- Added an explicit caveat that the prospectus shows only a selection of KCA experiences, with a route to the substantive full Curriculum.
-- Mobile refinement: single-column experience cards on phones, tighter frame padding, readable line lengths, full-width curriculum CTA, horizontal year-group selector retained.
+Updates:
+- Character pop-ups now use the substantive KCA Personal Development character stories.
+- Rebuilt 'What do others say about us?' as an evidence wall using Ofsted, IQM 2026, Camden Learning 2026, parent and pupil voice.
+- Added recognition/accreditation tiles for Rights Respecting Bronze, Healthy School Silver, IQM Centre of Excellence and Google Reference School.
+- Included the supplied KCA parent quote graphic.
+- Mobile version uses swipeable evidence cards and stacked recognition tiles.
+
+Note: the recognition tiles are prospectus-style badges, not official organisation logos. Official logo assets can be swapped in later if supplied.
