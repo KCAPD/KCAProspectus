@@ -70,46 +70,46 @@ yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
 }));
 
 const characterStories={
- Connor:["Courage","Connor","Each morning, Connor Courage arrives at school ready to face a new adventure. With a swish of his tail, he takes a new determined step in his learning.
+ Connor:["Courage","Connor",`Each morning, Connor Courage arrives at school ready to face a new adventure. With a swish of his tail, he takes a new determined step in his learning.
 
 Challenging work can feel hard and sometimes Connor feels nervous, so he reaches for the painted stone hanging around his neck. It reminds him to ‘Have a Go!’ He rolls up his sleeves, pulls on his sweatband and remembers to ‘Be Brave’.
 
 Even if Connor finds learning difficult, he doesn’t shy away from putting up his hand and proudly using his voice. He takes positive risks by sharing his ideas and speaking in front of others in assembly. Every time he tries something new, he adds a new idea branch to his collection. He understands that courage grows every time we try something challenging.
 
-Connor loves encouraging others to be brave. His shorts are decorated in badges that celebrate when they speak up or join in. He whizzes around our school community on his skates cheering people on. He might wobble now and then but proudly knows he is improving every day.","assets/courage.png"],
- Riley:["Respect","Riley","Thoughtful Riley Respect understands that differences make the KCA community stronger. Her beautiful, unique wings celebrate the experiences that everyone brings.
+Connor loves encouraging others to be brave. His shorts are decorated in badges that celebrate when they speak up or join in. He whizzes around our school community on his skates cheering people on. He might wobble now and then but proudly knows he is improving every day.`,"assets/courage.png"],
+ Riley:["Respect","Riley",`Thoughtful Riley Respect understands that differences make the KCA community stronger. Her beautiful, unique wings celebrate the experiences that everyone brings.
 
 As she spreads her wings wide, she welcomes everyone with equal affection. Everyone belongs at KCA. She treats every visitor, adult and classmate with respect.
 
 Her most prized possession is her gleaming shell hat; she holds it up to her ear to make sure she listens carefully to other people’s words. She knows that everyone’s opinion matters, even if she disagrees, and values what they say.
 
-The golden feather she carries reminds her to use ‘Kind Words and Kind Acts’. She knows that manners matter and always chooses to say ‘Please’ and ‘Thank You’. Riley also cares for the spaces she shares with others, looking after equipment and tidying up after herself.","assets/respect.png"],
- "Kiki & Kofi":["Kindness","Kiki & Kofi","Kiki and Kofi Kindness arrive at school every day ready to help others feel included, supported and valued. Together, they show that they can make a big difference through small caring actions. They love volunteering and don’t wait to be asked.
+The golden feather she carries reminds her to use ‘Kind Words and Kind Acts’. She knows that manners matter and always chooses to say ‘Please’ and ‘Thank You’. Riley also cares for the spaces she shares with others, looking after equipment and tidying up after herself.`,"assets/respect.png"],
+ "Kiki & Kofi":["Kindness","Kiki & Kofi",`Kiki and Kofi Kindness arrive at school every day ready to help others feel included, supported and valued. Together, they show that they can make a big difference through small caring actions. They love volunteering and don’t wait to be asked.
 
 With her shiny binoculars, Kiki always notices if someone looks worried, upset or left out and will offer them a helping hand. Warm and loving Kiki wraps them up with compassion and takes care to share.
 
 Empathetic Kofi understands what it feels like to be alone and will always invite others to join in a game. With a flick of his fishing rod, he catches smiles and reaches for positivity in others. His sparkling ladder encourages others to keep stepping up when learning becomes difficult and reminds them not to give up.
 
-Kiki and Kofi are a great team to have in our community. They may look soft and fluffy but Kindness is a powerful value that can turn rain into rainbows.","assets/kindness.png"],
- Isaac:["Integrity","Isaac","You can depend on Isaac Integrity to always do the right thing, even when nobody is watching. His strong shell stops him from being knocked by other people’s opinions so he always speaks up for what he believes is right.
+Kiki and Kofi are a great team to have in our community. They may look soft and fluffy but Kindness is a powerful value that can turn rain into rainbows.`,"assets/kindness.png"],
+ Isaac:["Integrity","Isaac",`You can depend on Isaac Integrity to always do the right thing, even when nobody is watching. His strong shell stops him from being knocked by other people’s opinions so he always speaks up for what he believes is right.
 
 The flashlights on his shell help him to examine everything he sees or hears so he can make a good choice and act fairly. Etched into the markings of his shell is his favourite word, ‘Honesty’. Gleaming grooves flow from it, tracing the KCA Way. He’s Ready, Respectful and Safe in everything he chooses to do.
 
 Although he may not be the fastest or loudest, his words and actions make him someone others can trust. He follows rules carefully, returns lost items and speaks up truthfully during learning or sport.
 
-Isaac knows that integrity means being honest and responsible, even when a task feels difficult or takes longer. He helps others to act with integrity too.","assets/integrity.png"],
- Eli:["Endurance","Eli","Eli Endurance knows that not everything goes perfectly the first time. Making mistakes is just part of the process and Eli resiliently tries again. As he practises and learns new skills, fresh leaves sprout — he’s growing stronger every day.
+Isaac knows that integrity means being honest and responsible, even when a task feels difficult or takes longer. He helps others to act with integrity too.`,"assets/integrity.png"],
+ Eli:["Endurance","Eli",`Eli Endurance knows that not everything goes perfectly the first time. Making mistakes is just part of the process and Eli resiliently tries again. As he practises and learns new skills, fresh leaves sprout — he’s growing stronger every day.
 
 If learning feels difficult, Eli takes a deep breath, patiently focuses his goggles on the challenge ahead and asks for help when needed. He tops up his fizzing bottle of enthusiasm and sets off with determination.
 
-Eli understands that perseverance helps people grow stronger and more confident. Holding his beacon up high for others to follow, he flies even higher to reach new levels of learning. His tail keeps him on the right course, even if there are bumps in the road. Positivity Power will help everyone shine!","assets/endurance.png"],
- Aria:["Aspiration","Aria","Aria Aspiration has her eyes focused on the horizon. It’s a wonderful world around her and she is ready for the exciting possibilities that come next. Curious and adventurous, she loves exploring; her special star visor helps her look beyond what is right in front of her and spot new adventures in learning.
+Eli understands that perseverance helps people grow stronger and more confident. Holding his beacon up high for others to follow, he flies even higher to reach new levels of learning. His tail keeps him on the right course, even if there are bumps in the road. Positivity Power will help everyone shine!`,"assets/endurance.png"],
+ Aria:["Aspiration","Aria",`Aria Aspiration has her eyes focused on the horizon. It’s a wonderful world around her and she is ready for the exciting possibilities that come next. Curious and adventurous, she loves exploring; her special star visor helps her look beyond what is right in front of her and spot new adventures in learning.
 
 With her question mark-shaped magnifying glass she studies the world around her with curiosity. Every thoughtful question adds to what she knows.
 
 Look closely at Aria’s wings. Their patterns are formed from the places she has explored, facts she has learnt, music she has played, books she has read and art she has created. Each new experience adds another dimension to her journey.
 
-The more detailed her wings become, the more she learns about herself and the world around her. Aria approaches every opportunity with enthusiasm and determination. She knows that aspiration means believing in yourself, working hard and being brave enough to wonder how high you can fly.","assets/aspiration.png"]
+The more detailed her wings become, the more she learns about herself and the world around her. Aria approaches every opportunity with enthusiasm and determination. She knows that aspiration means believing in yourself, working hard and being brave enough to wonder how high you can fly.`,"assets/aspiration.png"]
 };
 document.querySelectorAll('.characters figure').forEach(f=>{
  const name=f.querySelector('figcaption b')?.textContent.trim(), btn=f.querySelector('.meet');

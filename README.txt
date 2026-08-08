@@ -1,10 +1,8 @@
-KCA Digital Prospectus V2.8
+KCA Digital Prospectus V2.9
 
-Updates:
-- Character pop-ups now use the substantive KCA Personal Development character stories.
-- Rebuilt 'What do others say about us?' as an evidence wall using Ofsted, IQM 2026, Camden Learning 2026, parent and pupil voice.
-- Added recognition/accreditation tiles for Rights Respecting Bronze, Healthy School Silver, IQM Centre of Excellence and Google Reference School.
-- Included the supplied KCA parent quote graphic.
-- Mobile version uses swipeable evidence cards and stacked recognition tiles.
-
-Note: the recognition tiles are prospectus-style badges, not official organisation logos. Official logo assets can be swapped in later if supplied.
+Changes:
+- Removed the parent quote image; the evidence section is now text-led.
+- Parent voice now draws directly from the April 2026 KCA Parent Survey and includes the 92% recommendation figure.
+- Added CLPE Reference School, PiXL Partner School (2026), Ofsted Good (2023).
+- Google Reference School now displays 2025.
+- Fixed the values character pop-ups. V2.8 accidentally introduced invalid JavaScript by placing multiline stories inside ordinary quoted strings; V2.9 uses valid template literals and passes a JavaScript syntax check.
