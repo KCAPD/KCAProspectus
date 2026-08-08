@@ -808,3 +808,126 @@ img, video, iframe {
     padding:16px!important;
   }
 }
+
+/* V4.1 — curriculum containment + real mobile experience pagination */
+@media(max-width:800px){
+  /* Curriculum section: every child element is constrained to the phone viewport */
+  #learn{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+  }
+  #learn > .photo,
+  #learn > .copy{
+    min-width:0!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  #learn > .copy{
+    padding:54px 20px!important;
+    overflow:hidden!important;
+  }
+  #learn .copy > *{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  #learn h2{
+    width:100%!important;
+    font-size:clamp(2.25rem,10vw,3.25rem)!important;
+    line-height:1!important;
+    letter-spacing:-.04em!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  #learn p,
+  #learn blockquote,
+  #learn small,
+  #learn span{
+    white-space:normal!important;
+    overflow-wrap:break-word!important;
+    word-break:normal!important;
+  }
+
+  /* Keep the curriculum sequence on one line WITHOUT running off-screen */
+  #learn .curriculum-flow{
+    width:100%!important;
+    max-width:100%!important;
+    margin:24px 0!important;
+    padding:0!important;
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    justify-content:space-between!important;
+    gap:3px!important;
+    overflow:hidden!important;
+    white-space:nowrap!important;
+    font-size:clamp(.62rem,2.65vw,.78rem)!important;
+  }
+  #learn .curriculum-flow b,
+  #learn .curriculum-flow i{
+    flex:0 1 auto!important;
+    min-width:0!important;
+    white-space:nowrap!important;
+  }
+
+  #learn .big-question-showcase{
+    width:100%!important;
+    max-width:100%!important;
+    margin:26px 0!important;
+    padding:18px!important;
+    overflow:hidden!important;
+  }
+  #learn .big-question-showcase blockquote{
+    width:100%!important;
+    max-width:100%!important;
+    margin:12px 0!important;
+    font-size:.98rem!important;
+  }
+  #learn .textlink{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin-top:18px!important;
+    white-space:normal!important;
+  }
+
+  /* Mobile experience list: two columns, only 3 rows at first */
+  .experience-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    overflow:visible!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .experience-grid .journey-card{
+    min-width:0!important;
+    width:auto!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:14px!important;
+  }
+  .experience-grid .journey-card.mobile-truncated{
+    display:none!important;
+  }
+  .mobile-experience-toggle{
+    display:block!important;
+    width:100%!important;
+    margin:16px 0 6px!important;
+    padding:13px 16px!important;
+    border:1px solid #d7dde2!important;
+    border-radius:999px!important;
+    background:#fff!important;
+    color:#172033!important;
+    font:inherit!important;
+    font-weight:800!important;
+    cursor:pointer!important;
+  }
+  .mobile-experience-toggle.is-unneeded{display:none!important}
+}
+@media(max-width:360px){
+  .experience-grid{grid-template-columns:1fr!important}
+}

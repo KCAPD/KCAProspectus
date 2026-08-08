@@ -51,6 +51,36 @@ const yearCopy={
 };
 const yearTabs=document.querySelectorAll('.year-tab');
 const journeyCards=document.querySelectorAll('.journey-card');
+const experienceToggle=document.getElementById('experience-mobile-toggle');
+let experienceExpanded=false;
+
+function applyMobileExperienceLimit(){
+ const isMobile=window.matchMedia('(max-width:800px)').matches;
+ const eligible=[...journeyCards].filter(card=>!card.classList.contains('is-hidden'));
+ journeyCards.forEach(card=>card.classList.remove('mobile-truncated'));
+
+ if(!isMobile){
+   experienceToggle?.classList.add('is-unneeded');
+   return;
+ }
+
+ const needsToggle=eligible.length>6;
+ experienceToggle?.classList.toggle('is-unneeded',!needsToggle);
+
+ if(needsToggle && !experienceExpanded){
+   eligible.slice(6).forEach(card=>card.classList.add('mobile-truncated'));
+ }
+ if(experienceToggle){
+   experienceToggle.setAttribute('aria-expanded',String(experienceExpanded));
+   experienceToggle.textContent=experienceExpanded?'Show fewer experiences':'Show more experiences';
+ }
+}
+
+experienceToggle?.addEventListener('click',()=>{
+ experienceExpanded=!experienceExpanded;
+ applyMobileExperienceLimit();
+});
+
 yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
  yearTabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-pressed','false')});
  tab.classList.add('active');tab.setAttribute('aria-pressed','true');
@@ -60,6 +90,8 @@ yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
    const show=year==='all' || years.includes(year);
    card.classList.toggle('is-hidden',!show);
  });
+ experienceExpanded=false;
+ applyMobileExperienceLimit();
  const d=yearCopy[year]||yearCopy.all;
  const kicker=document.querySelector('.year-summary-kicker');
  const title=document.getElementById('journey-title');
@@ -68,6 +100,9 @@ yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
  if(title) title.textContent=d[1];
  if(copy) copy.textContent=d[2];
 }));
+
+window.addEventListener('resize',applyMobileExperienceLimit);
+applyMobileExperienceLimit();
 
 const characterStories={
  Connor:["Courage","Connor",`Each morning, Connor Courage arrives at school ready to face a new adventure. With a swish of his tail, he takes a new determined step in his learning.
@@ -137,12 +172,3 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape' && timetableModal && !timetableModal.hidden) timetableModal.hidden=true;
 });
 
-// V4.0 mobile experience expander
-const mobileExperienceToggle=document.querySelector('.mobile-experience-toggle');
-const mobileExperienceGrid=document.querySelector('.journey-grid');
-mobileExperienceToggle?.addEventListener('click',()=>{
-  if(!mobileExperienceGrid) return;
-  const open=mobileExperienceGrid.classList.toggle('show-all');
-  mobileExperienceToggle.setAttribute('aria-expanded',String(open));
-  mobileExperienceToggle.textContent=open?'Show fewer experiences':'Show more experiences';
-});
