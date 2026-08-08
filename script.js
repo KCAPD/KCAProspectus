@@ -42,10 +42,10 @@ const yearCopy={
  nursery:["Nursery","The journey begins with belonging","Our youngest children begin by building relationships, confidence and curiosity — learning alongside the wider KCA and Frank Barnes community."],
  reception:["Reception","Confidence, curiosity and independence","Reception widens children's world through performance, swimming, BSL and a growing sense of themselves as learners."],
  year1:["Year 1","Discovering the world just beyond the school gates","Food, farming, community, nature and the local area become part of children's first Key Stage 1 learning journeys."],
- year2:["Year 2","London becomes a place to investigate","Children encounter landmarks, animals, farms, plants and communities as they make connections between classroom knowledge and the wider city."],
- year3:["Year 3","London, journeys, water and the ancient world","Year 3 is rich with purposeful visits — from Horizon 22 and the British Library to the Canal Museum, Wetland Centre, Thames Barrier and British Museum."],
- year4:["Year 4","Big ideas meet real places","Rainforests, migration, food and the natural world are explored through visits including Kew Gardens, the Barbican Conservatory and Camden."],
- year5:["Year 5","Growing confidence, expertise and independence","By Year 5, pupils combine curriculum knowledge with increasingly ambitious performance, instrumental learning, LAMDA and wider opportunities."],
+ year2:["Year 2","Culture, history and change come to life","Food tasting, Victorian Day and explorations of how King’s Cross has changed sit alongside wider visits and experiences across London."],
+ year3:["Year 3","London, journeys, water and the ancient world","London Exploration Day, Stone Age Day and Ancient Egyptians Day sit alongside purposeful visits across the city, making learning tangible and memorable."],
+ year4:["Year 4","Big ideas meet real places and immersive history","Rainforest experiences, exploration of Camden, Ancient Greek Day and Romans Day give pupils contrasting ways to encounter ambitious curriculum knowledge."],
+ year5:["Year 5","Learning becomes increasingly immersive","Volcano Day, Anglo-Saxon learning, WonderDome and Tudor Experience Day sit alongside increasingly ambitious performance, music and wider opportunities."],
  year6:["Year 6","Leadership, independence and memories for life","Year 6 brings leadership, performance, immersive history, the Bright Futures Academy and an unforgettable residential to France."],
  whole:["Whole school","Some experiences belong to everyone","KCA-wide opportunities in arts, careers, music, technology, swimming and community ensure enrichment is part of every child's education."]
 };
