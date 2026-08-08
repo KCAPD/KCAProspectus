@@ -136,3 +136,13 @@ timetableModal?.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape' && timetableModal && !timetableModal.hidden) timetableModal.hidden=true;
 });
+
+// V4.0 mobile experience expander
+const mobileExperienceToggle=document.querySelector('.mobile-experience-toggle');
+const mobileExperienceGrid=document.querySelector('.journey-grid');
+mobileExperienceToggle?.addEventListener('click',()=>{
+  if(!mobileExperienceGrid) return;
+  const open=mobileExperienceGrid.classList.toggle('show-all');
+  mobileExperienceToggle.setAttribute('aria-expanded',String(open));
+  mobileExperienceToggle.textContent=open?'Show fewer experiences':'Show more experiences';
+});

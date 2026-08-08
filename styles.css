@@ -691,3 +691,120 @@ img, video, iframe {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* V4.0 — final mobile QA refinements */
+.mobile-experience-toggle{display:none}
+
+@media(max-width:800px){
+  /* Curriculum: contain the entire narrative block, not just its heading */
+  #learn,
+  #learn .wrap,
+  #learn .curriculum-copy,
+  #learn .curriculum-intro,
+  #learn .curriculum-text,
+  #learn .big-question-flow,
+  #learn .flow,
+  #learn p,
+  #learn h2,
+  #learn h3,
+  #learn a{
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+  #learn h2{
+    font-size:clamp(2.15rem,10vw,3.35rem)!important;
+    line-height:1!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    white-space:normal!important;
+  }
+  #learn p{
+    white-space:normal!important;
+    overflow-wrap:break-word!important;
+  }
+  #learn .flow,
+  #learn .big-question-flow{
+    width:100%!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    flex-wrap:wrap!important;
+  }
+  #learn a.btn,
+  #learn .btn,
+  #learn .button{
+    width:100%!important;
+    white-space:normal!important;
+    text-align:center!important;
+  }
+
+  /* Experiences: compact 2 x 3 initial view */
+  .journey-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+  }
+  .journey-card{
+    min-height:0!important;
+    height:auto!important;
+    padding:14px!important;
+    align-content:start!important;
+  }
+  .journey-card h3{margin:4px 0 6px!important}
+  .journey-card p{margin:0!important;line-height:1.32!important}
+  .journey-card:nth-child(n+7){display:none!important}
+  .journey-grid.show-all .journey-card:nth-child(n+7){display:grid!important}
+  .mobile-experience-toggle{
+    display:block;
+    width:100%;
+    margin:16px 0 4px;
+    padding:13px 16px;
+    border:1px solid #d7dde2;
+    border-radius:999px;
+    background:#fff;
+    color:#172033;
+    font:inherit;
+    font-weight:800;
+    cursor:pointer;
+  }
+
+  /* Values: 2 per row */
+  .characters,.values-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:14px!important;
+  }
+
+  /* Personal development year groups: 2 per row, never horizontal */
+  #become .year-tabs,
+  .personal-development .year-tabs,
+  .pd-tabs,.personal-tabs{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    overflow:visible!important;
+    width:100%!important;
+  }
+  #become .year-tab,
+  .personal-development .year-tab,
+  .pd-tabs>*,
+  .personal-tabs>*{
+    min-width:0!important;
+    width:100%!important;
+  }
+
+  /* Outcomes: Reception and Year 6 sit in one row */
+  .outcome-cards,
+  .outcomes-grid,
+  .headline-outcomes{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    overflow:visible!important;
+  }
+  .outcome-card,
+  .outcomes-grid>*,
+  .headline-outcomes>*{
+    min-width:0!important;
+    width:auto!important;
+    padding:16px!important;
+  }
+}
