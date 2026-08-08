@@ -36,3 +36,35 @@ pins.forEach(btn=>btn.addEventListener('click',()=>{
  if(text) text.textContent=d.x;
  if(tags) tags.innerHTML=d.tags.map(t=>`<span>${t}</span>`).join('');
 }));
+
+const yearCopy={
+ all:["Across KCA","Experiences that shape a KCA childhood","From local visits to major performances, every phase brings new opportunities to explore, create, perform, lead and belong."],
+ nursery:["Nursery","The journey begins with belonging","Our youngest children begin by building relationships, confidence and curiosity — learning alongside the wider KCA and Frank Barnes community."],
+ reception:["Reception","Confidence, curiosity and independence","Reception widens children's world through performance, swimming, BSL and a growing sense of themselves as learners."],
+ year1:["Year 1","Discovering the world just beyond the school gates","Food, farming, community, nature and the local area become part of children's first Key Stage 1 learning journeys."],
+ year2:["Year 2","London becomes a place to investigate","Children encounter landmarks, animals, farms, plants and communities as they make connections between classroom knowledge and the wider city."],
+ year3:["Year 3","London, journeys, water and the ancient world","Year 3 is rich with purposeful visits — from Horizon 22 and the British Library to the Canal Museum, Wetland Centre, Thames Barrier and British Museum."],
+ year4:["Year 4","Big ideas meet real places","Rainforests, migration, food and the natural world are explored through visits including Kew Gardens, the Barbican Conservatory and Camden."],
+ year5:["Year 5","Growing confidence, expertise and independence","By Year 5, pupils combine curriculum knowledge with increasingly ambitious performance, instrumental learning, LAMDA and wider opportunities."],
+ year6:["Year 6","Leadership, independence and memories for life","Year 6 brings leadership, performance, immersive history, the Bright Futures Academy and an unforgettable residential to France."],
+ whole:["Whole school","Some experiences belong to everyone","KCA-wide opportunities in arts, careers, music, technology, swimming and community ensure enrichment is part of every child's education."]
+};
+const yearTabs=document.querySelectorAll('.year-tab');
+const journeyCards=document.querySelectorAll('.journey-card');
+yearTabs.forEach(tab=>tab.addEventListener('click',()=>{
+ yearTabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-pressed','false')});
+ tab.classList.add('active');tab.setAttribute('aria-pressed','true');
+ const year=tab.dataset.year;
+ journeyCards.forEach(card=>{
+   const years=(card.dataset.years||'').split(/\s+/);
+   const show=year==='all' || years.includes(year);
+   card.classList.toggle('is-hidden',!show);
+ });
+ const d=yearCopy[year]||yearCopy.all;
+ const kicker=document.querySelector('.year-summary-kicker');
+ const title=document.getElementById('journey-title');
+ const copy=document.getElementById('journey-copy');
+ if(kicker) kicker.textContent=d[0];
+ if(title) title.textContent=d[1];
+ if(copy) copy.textContent=d[2];
+}));

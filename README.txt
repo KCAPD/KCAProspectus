@@ -1,10 +1,11 @@
-KCA Digital Prospectus V2.3
+KCA Digital Prospectus V2.4
 
-Expanded from V2.2:
-- Added all selected curriculum-site / yearly-overview experiences to the King's Cross/London experience map.
-- Added Google to the neighbourhood map with King's Cross Academy identified as a Google Reference School.
-- Added a separate 'Experiences that shape a KCA childhood' section for signature experiences that are not best represented by a London map.
-- Explicitly includes the Year 6 France residential.
-- Mobile retains tappable map points and gets swipeable location and signature-experience cards.
+Major change:
+- Removed the illustrated map completely.
+- Replaced it with an interactive Nursery–Year 6 experience journey.
+- Parents can filter the experience cards by Nursery, Reception, Year 1–6 or Whole School.
+- Mobile uses a horizontally scrolling year selector and swipeable experience cards.
+- Includes Google Reference School, BSL/Frank Barnes, curriculum visits, LAMDA, instrumental tuition, swimming, Bright Futures, Arts Week, Year 6 production and the France residential.
+- Keeps a direct route into the full Curriculum mini-site for parents who want every unit and Big Question.
 
-Upload index.html, styles.css and script.js together, retaining the existing assets folder.
+Upload index.html, styles.css and script.js together, retaining the assets folder.

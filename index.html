@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Discover King's Cross Academy</title>
-<link rel="stylesheet" href="styles.css?v=2.3">
+<link rel="stylesheet" href="styles.css?v=2.4">
 </head>
 <body>
 <header class="top">
@@ -55,100 +55,146 @@
   </div>
 </section>
 
-<section class="kingx map-section">
-  <div class="wrap map-intro">
+
+<section class="kingx journey-section">
+  <div class="wrap journey-intro">
     <p class="eyebrow red">More than a postcode</p>
     <h2>King's Cross is part of the curriculum.</h2>
     <p class="lead">Our location changes what is possible. Children grow up alongside world-leading arts, science, technology and community organisations. Partnerships with Frank Barnes School for Deaf Children, Central Saint Martins, the Francis Crick Institute, Google UK and others broaden horizons, enrich learning and raise aspirations.</p>
-    <p class="map-prompt">Explore some of the places and experiences that bring learning to life.</p>
+    <p class="journey-prompt">See where a KCA childhood can take you.</p>
   </div>
 
-  <div class="map-section-title wrap">
-      <span>LEARNING BEYOND OUR GATES</span>
-      <h3>Tap the map to explore KCA's neighbourhood.</h3>
-    </div>
-    <div class="experience-map wrap" aria-label="Interactive KCA experience map">
-    <div class="map-canvas">
-      <div class="canal"></div>
-      <div class="rail r1"></div><div class="rail r2"></div>
-      <div class="map-road road-a">York Way</div>
-      <div class="map-road road-b">King's Boulevard</div>
-      <div class="map-label">KING'S CROSS <b>EXPERIENCE MAP</b><small>illustrated journey · not to scale</small></div>
-
-      <button class="map-pin school active" data-place="school"><span>★</span><b>KCA</b></button>
-      <button class="map-pin csm" data-place="csm"><span>🎨</span><b>Central Saint Martins</b></button>
-      <button class="map-pin coal" data-place="coal"><span>🎵</span><b>Coal Drops Yard</b></button>
-      <button class="map-pin library" data-place="library"><span>🗺</span><b>British Library</b></button>
-      <button class="map-pin canal-museum" data-place="canal"><span>💧</span><b>Canal Museum</b></button>
-      <button class="map-pin crick" data-place="crick"><span>🔬</span><b>Francis Crick Institute</b></button>
-      <button class="map-pin frank" data-place="frank"><span>🤟</span><b>Frank Barnes</b></button>
-      <button class="map-pin google" data-place="google"><span>G</span><b>Google</b></button>
-      <button class="map-pin horizon" data-place="horizon"><span>🏙</span><b>Horizon 22</b></button>
-      <button class="map-pin tower" data-place="tower"><span>🌉</span><b>Tower Bridge</b></button>
-      <button class="map-pin aquarium" data-place="aquarium"><span>🐠</span><b>London Aquarium</b></button>
-      <button class="map-pin spitalfields" data-place="spitalfields"><span>🐐</span><b>Spitalfields City Farm</b></button>
-      <button class="map-pin kew" data-place="kew"><span>🌿</span><b>Kew Gardens</b></button>
-      <button class="map-pin museum" data-place="museum"><span>🏺</span><b>British Museum</b></button>
-      <button class="map-pin wetlands" data-place="wetlands"><span>🦆</span><b>London Wetland Centre</b></button>
-      <button class="map-pin church" data-place="church"><span>⛪</span><b>St Pancras Church</b></button>
-      <button class="map-pin heath" data-place="heath"><span>🌳</span><b>Hampstead Heath</b></button>
-      <button class="map-pin gunnersbury" data-place="gunnersbury"><span>🏛</span><b>Gunnersbury Park Museum</b></button>
-      <button class="map-pin barbican" data-place="barbican"><span>🌴</span><b>Barbican Conservatory</b></button>
-      <button class="map-pin kentish" data-place="kentish"><span>🐄</span><b>Kentish Town City Farm</b></button>
-      <button class="map-pin thames" data-place="thames"><span>🌊</span><b>Thames Barrier</b></button>
+  <div class="wrap experience-browser">
+    <div class="year-tabs" role="tablist" aria-label="Filter experiences by year group">
+      <button class="year-tab active" type="button" data-year="all" aria-pressed="true">Highlights</button>
+      <button class="year-tab" type="button" data-year="nursery" aria-pressed="false">Nursery</button>
+      <button class="year-tab" type="button" data-year="reception" aria-pressed="false">Reception</button>
+      <button class="year-tab" type="button" data-year="year1" aria-pressed="false">Year 1</button>
+      <button class="year-tab" type="button" data-year="year2" aria-pressed="false">Year 2</button>
+      <button class="year-tab" type="button" data-year="year3" aria-pressed="false">Year 3</button>
+      <button class="year-tab" type="button" data-year="year4" aria-pressed="false">Year 4</button>
+      <button class="year-tab" type="button" data-year="year5" aria-pressed="false">Year 5</button>
+      <button class="year-tab" type="button" data-year="year6" aria-pressed="false">Year 6</button>
+      <button class="year-tab" type="button" data-year="whole" aria-pressed="false">Whole school</button>
     </div>
 
-    <aside class="map-detail" aria-live="polite">
-      <div class="map-detail-kicker" id="map-kicker">Start here</div>
-      <h3 id="map-title">King's Cross Academy</h3>
-      <p id="map-text">Our neighbourhood becomes an extension of the classroom. Tap a point on the map to discover real experiences from the KCA curriculum.</p>
-      <div id="map-tags" class="map-tags"><span>Nursery → Year 6</span><span>Learning beyond our gates</span></div>
-    </aside>
-  </div>
+    <div class="year-summary" aria-live="polite">
+      <span class="year-summary-kicker">Across KCA</span>
+      <h3 id="journey-title">Experiences that shape a KCA childhood</h3>
+      <p id="journey-copy">From local visits to major performances, every phase brings new opportunities to explore, create, perform, lead and belong.</p>
+    </div>
 
-  <div class="mobile-experiences wrap">
-    <p class="eyebrow red">Swipe through the neighbourhood</p>
-    <div class="experience-strip">
-      <article><b>Central Saint Martins</b><span>Whole school · Arts</span><p>Arts Week culminates in a gallery exhibition where children share ambitious creative work with families and the wider community.</p></article>
-      <article><b>Google</b><span>Whole school · Technology</span><p>KCA is a <strong>Google Reference School</strong>, recognising our use of technology to support ambitious teaching, learning and digital confidence.</p></article>
-      <article><b>Coal Drops Yard</b><span>KS2 · Performance</span><p>Children perform Songs Under the Tree, sharing music with families, visitors and the local King's Cross community.</p></article>
-      <article><b>British Library</b><span>Year 3 · Geography</span><p>Voyage into Maps supports children's study of journeys, mapping and the world around them.</p></article>
-      <article><b>London Canal Museum</b><span>Year 3 · Geography</span><p>A canal and water study brings the Big Question about how water brings people together into the local area.</p></article>
-      <article><b>Francis Crick Institute</b><span>Science · Partnership</span><p>Practical science experiences connect pupils with world-leading research on the school's doorstep.</p></article>
-      <article><b>Frank Barnes School</b><span>Nursery–Year 3 · BSL</span><p>Sharing our campus creates a distinctive inclusive community, with British Sign Language woven into children's early KCA experience.</p></article>
-      <article><b>Horizon 22</b><span>Year 3 · London</span><p>Children explore London from above as part of their study of how the city's past has shaped the place they know today.</p></article>
-      <article><b>Tower Bridge</b><span>Year 2 · London</span><p>A visit to one of London's best-known landmarks supports children as they explore the city, its people and its history.</p></article>
-      <article><b>London Aquarium</b><span>Year 2 · Science</span><p>Children encounter marine life first-hand as part of a curriculum that connects knowledge with memorable real-world experiences.</p></article>
-      <article><b>Spitalfields City Farm</b><span>Year 2 · Environment</span><p>Children explore living things, habitats and the relationship between communities and the natural world.</p></article>
-      <article><b>Kew Gardens</b><span>Years 2 & 4 · Science & Geography</span><p>Kew supports learning about plants, environments and the world's rainforests through direct observation and exploration.</p></article>
-      <article><b>British Museum</b><span>Year 3 · History</span><p>Ancient Egypt is brought to life through artefacts and collections before children share their learning with an authentic audience.</p></article>
-      <article><b>London Wetland Centre</b><span>Year 3 · Geography</span><p>Children investigate habitats and climate as they ask how people and living things adapt to different environments.</p></article>
-      <article><b>St Pancras Church</b><span>Year 1 · Community</span><p>A local visit helps children explore community, identity and the places that shape the neighbourhood around them.</p></article>
-      <article><b>Hampstead Heath</b><span>Year 1 · Local environment</span><p>Children explore the natural world beyond school, connecting observation, curiosity and care for their environment.</p></article>
-      <article><b>Gunnersbury Park Museum</b><span>Year 3 · History</span><p>A museum visit supports children's understanding of the Stone Age and the way people lived in the past.</p></article>
-      <article><b>Barbican Conservatory</b><span>Year 4 · Rainforests</span><p>Children experience a tropical environment in London while exploring why the world's rainforests matter and why they should be protected.</p></article>
-      <article><b>Kentish Town City Farm</b><span>Year 1 · Food & farming</span><p>Children make connections between food, farming and where the things we eat come from.</p></article>
-      <article><b>Thames Barrier</b><span>Year 3 · Water</span><p>The Thames Barrier becomes part of children's investigation into water, rivers and how communities respond to their environment.</p></article>
-    </div></div>
+    <div class="experience-grid" id="experience-grid">
+      <article class="journey-card feature" data-years="whole year3 year6">
+        <span class="journey-icon">🎨</span><div><small>Whole school · Arts</small><h3>Central Saint Martins</h3><p>Arts Week culminates in a gallery exhibition where children share ambitious creative work with families and the wider community. Year 3 and Year 6 learning also builds towards exhibition and presentation opportunities here.</p></div>
+      </article>
+      <article class="journey-card feature" data-years="whole">
+        <span class="journey-icon">G</span><div><small>Whole school · Technology</small><h3>Google Reference School</h3><p>KCA is a <strong>Google Reference School</strong>, recognising our use of technology to support ambitious teaching, learning and digital confidence.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole nursery reception year1 year2 year3">
+        <span class="journey-icon">🤟</span><div><small>Nursery–Year 3 · BSL & inclusion</small><h3>Frank Barnes School</h3><p>Sharing our campus with Frank Barnes School for Deaf Children creates a distinctive inclusive community. KCA pupils learn British Sign Language from Nursery to Year 3 and children learn and play alongside one another.</p></div>
+      </article>
+      <article class="journey-card" data-years="year1">
+        <span class="journey-icon">🐄</span><div><small>Year 1 · Food & farming</small><h3>Kentish Town City Farm</h3><p>Children make connections between food, farming and where the things we eat come from.</p></div>
+      </article>
+      <article class="journey-card" data-years="year1">
+        <span class="journey-icon">⛪</span><div><small>Year 1 · Community</small><h3>St Pancras Church</h3><p>A local visit helps children explore community, identity and the places that shape their neighbourhood.</p></div>
+      </article>
+      <article class="journey-card" data-years="year1">
+        <span class="journey-icon">🌳</span><div><small>Year 1 · Local environment</small><h3>Hampstead Heath</h3><p>Children explore the natural world beyond school, connecting observation and curiosity with care for the environment.</p></div>
+      </article>
+      <article class="journey-card" data-years="year1">
+        <span class="journey-icon">🧭</span><div><small>Year 1 · Local area</small><h3>Local Area Treasure Hunt</h3><p>Children explore the neighbourhood around KCA, building confidence, curiosity and a growing sense of place.</p></div>
+      </article>
+
+      <article class="journey-card" data-years="year2">
+        <span class="journey-icon">🌉</span><div><small>Year 2 · London</small><h3>Tower Bridge</h3><p>A visit to one of London's best-known landmarks supports children's study of the city, its people and its history.</p></div>
+      </article>
+      <article class="journey-card" data-years="year2">
+        <span class="journey-icon">🐠</span><div><small>Year 2 · Science</small><h3>London Aquarium</h3><p>Children encounter marine life first-hand as science knowledge becomes a memorable real-world experience.</p></div>
+      </article>
+      <article class="journey-card" data-years="year2">
+        <span class="journey-icon">🐐</span><div><small>Year 2 · Environment</small><h3>Spitalfields City Farm</h3><p>Children explore living things, habitats and the relationship between communities and the natural world.</p></div>
+      </article>
+      <article class="journey-card" data-years="year2 year4">
+        <span class="journey-icon">🌿</span><div><small>Years 2 & 4 · Science & geography</small><h3>Kew Gardens</h3><p>Kew supports learning about plants, environments and rainforests through direct observation and exploration.</p></div>
+      </article>
+
+      <article class="journey-card feature" data-years="year3">
+        <span class="journey-icon">🏙</span><div><small>Year 3 · London</small><h3>Horizon 22</h3><p>Children explore London from above as they investigate how the city's past has shaped the place they know today.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">🗺</span><div><small>Year 3 · Geography</small><h3>British Library — Voyage into Maps</h3><p>Children develop mapping skills and explore how journeys help us understand the world and each other.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">🏛</span><div><small>Year 3 · History</small><h3>Gunnersbury Park Museum</h3><p>A museum visit supports children's understanding of the Stone Age and how people lived in the past.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">💧</span><div><small>Year 3 · Geography</small><h3>London Canal Museum & Water Study</h3><p>Children investigate their Big Question about how water brings people together through a local canal and water study.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">🦆</span><div><small>Year 3 · Geography</small><h3>London Wetland Centre</h3><p>Children investigate habitats and climate as they consider how people and living things adapt to different environments.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">🌊</span><div><small>Year 3 · Water</small><h3>Thames Barrier</h3><p>The Thames Barrier becomes part of children's investigation into water, rivers and how communities respond to their environment.</p></div>
+      </article>
+      <article class="journey-card" data-years="year3">
+        <span class="journey-icon">🏺</span><div><small>Year 3 · History</small><h3>British Museum</h3><p>Ancient Egypt is brought to life through artefacts and collections before children share their learning with an authentic audience.</p></div>
+      </article>
+
+      <article class="journey-card" data-years="year4">
+        <span class="journey-icon">🌴</span><div><small>Year 4 · Rainforests</small><h3>Barbican Conservatory</h3><p>Children experience a tropical environment in London while exploring why the world's rainforests matter and why they should be protected.</p></div>
+      </article>
+      <article class="journey-card" data-years="year4">
+        <span class="journey-icon">🧳</span><div><small>Year 4 · Community</small><h3>Exploring Camden & Immigration</h3><p>Children explore Camden's development and the stories of people who have built new lives here.</p></div>
+      </article>
+
+      <article class="journey-card feature" data-years="whole year3 year4 year5">
+        <span class="journey-icon">🎤</span><div><small>Years 3–5 · Communication</small><h3>LAMDA examinations</h3><p>Fully funded teaching and examinations develop voice, interpretation and confident public performance through nationally recognised qualifications.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole year4 year5 year6">
+        <span class="journey-icon">🎼</span><div><small>Years 4–6 · Music</small><h3>Instrumental tuition</h3><p>Every pupil receives fully funded instrumental tuition, developing musical knowledge, disciplined practice and confidence to perform.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole nursery reception year1 year2 year3 year4 year5 year6">
+        <span class="journey-icon">🏊</span><div><small>Every year group · PE</small><h3>Swimming</h3><p>Children progressively build water confidence, technique and essential safety knowledge across their time at KCA.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole">
+        <span class="journey-icon">💼</span><div><small>Whole school · Careers</small><h3>Bright Futures Festival</h3><p>Children meet professionals, take part in practical workshops and discover how today's learning connects with tomorrow's possibilities.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole">
+        <span class="journey-icon">🎨</span><div><small>Whole school · Creativity</small><h3>Arts Week</h3><p>A week of visual art, music, drama and dance culminates in a public exhibition at Central Saint Martins.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole year4 year5 year6">
+        <span class="journey-icon">🎄</span><div><small>KS2 · Community performance</small><h3>Songs Under the Tree</h3><p>Pupils perform at Coal Drops Yard, sharing music with families, visitors and the wider King's Cross community.</p></div>
+      </article>
+      <article class="journey-card" data-years="whole nursery reception year1 year2">
+        <span class="journey-icon">⭐</span><div><small>EYFS & KS1 · Performance</small><h3>Christmas productions</h3><p>Our youngest children take to the stage, developing speaking, singing, teamwork and confidence.</p></div>
+      </article>
+
+      <article class="journey-card feature" data-years="year6">
+        <span class="journey-icon">🇫🇷</span><div><small>Year 6 · Residential</small><h3>Residential to France</h3><p>Our oldest pupils travel to France for an immersive residential that develops independence, resilience and cultural understanding — and creates lifelong memories.</p></div>
+      </article>
+      <article class="journey-card" data-years="year6">
+        <span class="journey-icon">🧑‍💼</span><div><small>Year 6 · Leadership</small><h3>Bright Futures Academy</h3><p>Pupils apply and interview for meaningful roles across school, building leadership, organisation and professional confidence.</p></div>
+      </article>
+      <article class="journey-card" data-years="year6">
+        <span class="journey-icon">🎭</span><div><small>Year 6 · Performance</small><h3>Year 6 production</h3><p>Every pupil contributes to a full-scale musical production, bringing together confidence, teamwork and creativity.</p></div>
+      </article>
+      <article class="journey-card" data-years="year6">
+        <span class="journey-icon">📰</span><div><small>Year 6 · History & performance</small><h3>World War experiences</h3><p>World War I Day and an immersive evacuation experience help children explore history through purposeful, memorable learning.</p></div>
+      </article>
+      <article class="journey-card" data-years="year6">
+        <span class="journey-icon">🎉</span><div><small>Year 6 · Windrush</small><h3>Notting Hill Carnival</h3><p>Children connect their learning about the Windrush generation with London's living cultural history.</p></div>
+      </article>
+    </div>
+
+    <div class="journey-footer">
+      <p><strong>Want the complete picture?</strong> Explore every Big Question, initial experience, trip and learning presentation in our interactive curriculum.</p>
+      <a class="button" href="https://kcapd.github.io/KCACurriculum/">Explore the full KCA Curriculum</a>
+    </div>
   </div>
 </section>
-<section class="signature-experiences wrap">
-  <p class="eyebrow red">Experiences that shape a KCA childhood</p>
-  <h2>Some things cannot be pinned to one place.</h2>
-  <p class="lead">Alongside visits and partnerships across London, children encounter a deliberately rich programme of performance, leadership, creativity, sport, music and adventure.</p>
-  <div class="signature-grid">
-    <article><span>💼</span><b>Bright Futures Festival</b><small>Whole school · Careers</small><p>Children meet professionals, take part in practical workshops and connect today's learning with tomorrow's possibilities.</p></article>
-    <article><span>🧑‍💼</span><b>Bright Futures Academy</b><small>Year 6 · Leadership</small><p>Pupils apply and interview for meaningful roles across school, building leadership, organisation and professional confidence.</p></article>
-    <article><span>🎨</span><b>Arts Week</b><small>Whole school · Creativity</small><p>A week of visual art, music, drama and dance culminating in a public exhibition at Central Saint Martins.</p></article>
-    <article><span>🎤</span><b>LAMDA examinations</b><small>Years 3–5 · Communication</small><p>Fully funded teaching and examinations develop voice, interpretation and confident public performance through recognised qualifications.</p></article>
-    <article><span>🎼</span><b>Instrumental tuition</b><small>Years 4–6 · Music</small><p>Every pupil receives fully funded instrumental tuition, developing musical knowledge, practice habits and confidence to perform.</p></article>
-    <article><span>🏊</span><b>Swimming</b><small>Every year group · PE</small><p>Children build water confidence, technique and essential safety knowledge progressively across their time at KCA.</p></article>
-    <article><span>🎭</span><b>Year 6 production</b><small>Year 6 · Performance</small><p>Every pupil contributes to a full-scale musical production, bringing together confidence, teamwork and creativity.</p></article>
-    <article><span>🇫🇷</span><b>Residential to France</b><small>Year 6 · Residential</small><p>Our oldest pupils travel to France for an immersive residential that develops independence, resilience and cultural understanding — and creates lifelong memories.</p></article>
-    <article><span>🎄</span><b>Songs Under the Tree</b><small>KS2 · Community performance</small><p>Pupils perform in Coal Drops Yard, sharing music with families, visitors and the wider King's Cross community.</p></article>
-    <article><span>⭐</span><b>Christmas productions</b><small>EYFS & KS1 · Performance</small><p>Our youngest children take to the stage, developing speaking, singing, teamwork and confidence.</p></article>
-  </div>
-</section>
+
 
 <section id="become" class="values">
   <div class="wrap">
@@ -251,5 +297,5 @@
 
 <a class="mobile-tour" href="https://kingscrossacademy.org.uk/school-tours">Book a tour</a>
 <footer><img src="assets/logo.png" alt=""><span>King's Cross Academy · Love Learning Together</span></footer>
-<script src="script.js?v=2.3"></script>
+<script src="script.js?v=2.4"></script>
 </body></html>

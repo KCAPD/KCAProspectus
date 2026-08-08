@@ -58,3 +58,39 @@
  .church{right:5%;bottom:33%}.heath{left:4%;top:9%}.gunnersbury{left:19%;bottom:5%}.barbican{right:2%;top:5%}
  .kentish{left:3%;top:31%}.thames{right:19%;bottom:18%}
 }
+
+/* V2.4 Nursery–Year 6 experience journey */
+.journey-section{background:#f6f1e8;padding:0 0 100px}
+.journey-intro{text-align:center;padding-bottom:35px}
+.journey-intro .lead{margin-left:auto;margin-right:auto}
+.journey-prompt{margin-top:30px;font-weight:900;color:#e52735;font-size:1.1rem}
+.experience-browser{padding-top:0}
+.year-tabs{display:flex;gap:9px;overflow-x:auto;padding:3px 2px 14px;scrollbar-width:thin;position:sticky;top:82px;z-index:8;background:linear-gradient(#f6f1e8 78%,transparent)}
+.year-tab{appearance:none;border:1px solid #cfc8bb;background:#fff;color:#172033;border-radius:999px;padding:11px 16px;font-weight:900;white-space:nowrap;cursor:pointer}
+.year-tab.active{background:#e52735;color:#fff;border-color:#e52735}
+.year-summary{max-width:780px;padding:28px 0 18px}
+.year-summary-kicker{display:block;text-transform:uppercase;letter-spacing:.13em;color:#e52735;font-size:.72rem;font-weight:900}
+.year-summary h3{font-size:clamp(2rem,4vw,3.4rem);line-height:1;margin:.25em 0}
+.year-summary p{font-size:1.1rem}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.journey-card{background:#fff;border-radius:20px;padding:24px;display:flex;gap:16px;min-height:210px;transition:opacity .2s,transform .2s}
+.journey-card.feature{grid-column:span 2;background:#182033;color:#fff}
+.journey-card.is-hidden{display:none}
+.journey-icon{font-size:1.8rem;line-height:1;width:38px;flex:0 0 38px;text-align:center}
+.journey-card h3{font-size:1.35rem;line-height:1.08;margin:.25em 0 .5em}
+.journey-card small{display:block;color:#e52735;font-weight:900}
+.journey-card.feature small{color:#ff7c86}
+.journey-card p{margin:0;font-size:.96rem}
+.journey-footer{margin-top:32px;padding:30px;border-top:1px solid #cfc8bb;display:flex;gap:30px;align-items:center;justify-content:space-between}
+.journey-footer p{max-width:700px;margin:0}
+@media(max-width:1000px){
+ .experience-grid{grid-template-columns:repeat(2,1fr)}
+ .journey-card.feature{grid-column:span 1}
+}
+@media(max-width:800px){
+ .year-tabs{top:66px;margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px}
+ .experience-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;margin-left:-22px;margin-right:-22px;padding:0 22px 14px}
+ .journey-card,.journey-card.feature{min-width:82vw;scroll-snap-align:center;min-height:245px}
+ .journey-footer{display:block;padding:26px 0 0}
+ .journey-footer .button{margin-top:18px}
+}
