@@ -977,3 +977,11 @@ img, video, iframe {
     display:none!important;
   }
 }
+
+/* V4.4 — experience framing */
+.experience-flavour{max-width:850px;margin:30px 0 28px}
+.experience-flavour p:last-child{margin:8px 0 0;line-height:1.65}
+@media(max-width:800px){
+ .experience-flavour{margin:24px 0 20px;max-width:100%}
+ .experience-flavour p:last-child{font-size:.96rem;line-height:1.55}
+}
