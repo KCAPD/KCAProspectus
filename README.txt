@@ -1,5 +1,8 @@
-KCA Digital Prospectus V2
-Open index.html to preview locally.
+KCA Digital Prospectus V2.1
 
-V2 design principle: self-contained storytelling first, optional deep dives second.
-The 'What do others say about us?' section intentionally includes two placeholders for verified external/pupil evidence.
+Changes from V2:
+1. Curriculum section now foregrounds Big Questions and uses genuine KCA examples.
+2. 'More than a postcode' now includes a prototype interactive illustrated King's Cross experience map.
+3. Mobile receives a simplified map plus swipeable neighbourhood experience cards.
+
+The map is intentionally an illustrated experience map, not a geographically precise street map.

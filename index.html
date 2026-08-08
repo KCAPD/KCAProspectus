@@ -55,11 +55,50 @@
   </div>
 </section>
 
-<section class="kingx wrap">
-  <p class="eyebrow red">More than a postcode</p>
-  <h2>King's Cross is part of the curriculum.</h2>
-  <p class="lead">Our location changes what is possible. Children grow up alongside world-leading arts, science, technology and community organisations. Partnerships with Frank Barnes School for Deaf Children, Central Saint Martins, the Francis Crick Institute, Google UK and others broaden horizons, enrich learning and raise aspirations.</p>
-  <div class="feature-line"><span>BSL</span><span>Arts</span><span>Science</span><span>Technology</span><span>Community</span></div>
+<section class="kingx map-section">
+  <div class="wrap map-intro">
+    <p class="eyebrow red">More than a postcode</p>
+    <h2>King's Cross is part of the curriculum.</h2>
+    <p class="lead">Our location changes what is possible. Children grow up alongside world-leading arts, science, technology and community organisations. Partnerships with Frank Barnes School for Deaf Children, Central Saint Martins, the Francis Crick Institute, Google UK and others broaden horizons, enrich learning and raise aspirations.</p>
+    <p class="map-prompt">Explore some of the places and experiences that bring learning to life.</p>
+  </div>
+
+  <div class="experience-map wrap" aria-label="Interactive KCA experience map">
+    <div class="map-canvas">
+      <div class="canal"></div>
+      <div class="rail r1"></div><div class="rail r2"></div>
+      <div class="map-road road-a">York Way</div>
+      <div class="map-road road-b">King's Boulevard</div>
+      <div class="map-label">KING'S CROSS <b>EXPERIENCE MAP</b><small>illustrated journey · not to scale</small></div>
+
+      <button class="map-pin school active" data-place="school"><span>★</span><b>KCA</b></button>
+      <button class="map-pin csm" data-place="csm"><span>🎨</span><b>Central Saint Martins</b></button>
+      <button class="map-pin coal" data-place="coal"><span>🎵</span><b>Coal Drops Yard</b></button>
+      <button class="map-pin library" data-place="library"><span>🗺</span><b>British Library</b></button>
+      <button class="map-pin canal-museum" data-place="canal"><span>💧</span><b>Canal Museum</b></button>
+      <button class="map-pin crick" data-place="crick"><span>🔬</span><b>Francis Crick Institute</b></button>
+      <button class="map-pin frank" data-place="frank"><span>🤟</span><b>Frank Barnes</b></button>
+    </div>
+
+    <aside class="map-detail" aria-live="polite">
+      <div class="map-detail-kicker" id="map-kicker">Start here</div>
+      <h3 id="map-title">King's Cross Academy</h3>
+      <p id="map-text">Our neighbourhood becomes an extension of the classroom. Tap a point on the map to discover real experiences from the KCA curriculum.</p>
+      <div id="map-tags" class="map-tags"><span>Nursery → Year 6</span><span>Learning beyond our gates</span></div>
+    </aside>
+  </div>
+
+  <div class="mobile-experiences wrap">
+    <p class="eyebrow red">Swipe through the neighbourhood</p>
+    <div class="experience-strip">
+      <article><b>Central Saint Martins</b><span>Whole school · Arts</span><p>Arts Week culminates in a gallery exhibition where children share ambitious creative work with families and the wider community.</p></article>
+      <article><b>Coal Drops Yard</b><span>KS2 · Performance</span><p>Children perform Songs Under the Tree, sharing music with families, visitors and the local King's Cross community.</p></article>
+      <article><b>British Library</b><span>Year 3 · Geography</span><p>Voyage into Maps supports children's study of journeys, mapping and the world around them.</p></article>
+      <article><b>Canal Museum</b><span>Year 3 · Geography</span><p>A canal and water study brings the curriculum's Big Question about how water brings people together into the local area.</p></article>
+      <article><b>Francis Crick Institute</b><span>Science</span><p>Practical science experiences connect pupils with world-leading research on the school's doorstep.</p></article>
+      <article><b>Frank Barnes</b><span>Nursery–Year 3 · BSL</span><p>Sharing our campus creates a distinctive inclusive community, with BSL woven into children's early KCA experience.</p></article>
+    </div>
+  </div>
 </section>
 
 <section id="become" class="values">
