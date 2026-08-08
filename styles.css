@@ -200,3 +200,25 @@
 .recognition-badges{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1050px){.recognition-badges{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.recognition-badges{grid-template-columns:1fr}}
+
+/* V3.0 evidence + validation */
+.evidence-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;overflow:visible!important;margin:42px 0 0!important;padding:0!important}
+.evidence-grid .evidence-card{grid-column:auto!important;min-width:0!important;min-height:330px!important;background:#fff!important;color:#172033!important;border:1px solid #e5e7eb;scroll-snap-align:start}
+.evidence-grid .evidence-source{color:#e52735!important}
+.evidence-grid .evidence-card blockquote{font-size:clamp(1.25rem,1.7vw,1.8rem)}
+.evidence-grid .evidence-card p{margin:10px 0 0}
+.evidence-grid .pupil-quotes p{font-weight:650}
+.recognition-badges{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+.recognition-badge{min-height:245px!important;text-align:center;align-items:center;background:#fff;padding:18px!important}
+.logo-stage{height:125px;width:100%;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.logo-stage img{display:block;max-width:88%;max-height:105px;width:auto;height:auto;object-fit:contain}
+.recognition-badge strong{margin-top:auto}.recognition-badge span{margin-top:8px!important}
+@media(max-width:900px){
+ .evidence-grid{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;padding:0 22px 16px!important;margin-left:-22px!important;margin-right:-22px!important}
+ .evidence-grid .evidence-card{min-width:min(82vw,390px)!important;min-height:350px!important}
+ .recognition-badges{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+ .recognition-badges{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:-22px;margin-right:-22px;padding:0 22px 14px;gap:12px!important}
+ .recognition-badge{min-width:72vw;scroll-snap-align:start}
+}
