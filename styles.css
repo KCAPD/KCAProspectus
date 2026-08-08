@@ -222,3 +222,35 @@
  .recognition-badges{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:-22px;margin-right:-22px;padding:0 22px 14px;gap:12px!important}
  .recognition-badge{min-width:72vw;scroll-snap-align:start}
 }
+
+/* V3.1 — Beyond the school day */
+.beyond-school-day{padding:90px 0;background:#f7f7f5;color:#172033}
+.beyond-school-day .lead{max-width:900px}
+.beyond-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:38px 0 20px}
+.beyond-cards article{background:#fff;border:1px solid #e5e7eb;border-radius:22px;padding:26px}
+.beyond-cards h3{font-size:1.45rem;margin:10px 0}
+.beyond-cards p{margin:0;line-height:1.6}
+.beyond-number{font-weight:900;color:#e52735;font-size:.78rem;letter-spacing:.12em}
+.reception-note{display:grid;grid-template-columns:190px 1fr;gap:20px;align-items:center;background:#172033;color:#fff;border-radius:18px;padding:22px 26px;margin:20px 0 34px}
+.reception-note strong{font-size:1.2rem}
+.reception-note span{line-height:1.55}
+.timetable-panel{background:#fff;border:1px solid #e1e4e8;border-radius:24px;padding:26px;box-shadow:0 12px 35px rgba(0,0,0,.06)}
+.timetable-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
+.timetable-heading h3{font-size:2rem;margin:3px 0 0}
+.timetable-image-link{display:block;border-radius:14px;overflow:hidden;border:1px solid #d8dce1;background:#fff}
+.timetable-image-link img{display:block;width:100%;height:auto}
+.timetable-tip{display:none;color:#68707c;font-size:.85rem;margin:10px 0 0;text-align:center}
+@media(max-width:900px){
+ .beyond-school-day{padding:65px 0}
+ .beyond-cards{grid-template-columns:1fr}
+ .reception-note{grid-template-columns:1fr;gap:6px}
+ .timetable-heading{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:650px){
+ .timetable-panel{padding:14px;border-radius:18px}
+ .timetable-heading h3{font-size:1.6rem}
+ .timetable-heading .button{width:100%;text-align:center}
+ .timetable-image-link{max-height:560px;overflow:auto}
+ .timetable-image-link img{width:780px;max-width:none}
+ .timetable-tip{display:block}
+}
