@@ -751,9 +751,7 @@ img, video, iframe {
   }
   .journey-card h3{margin:4px 0 6px!important}
   .journey-card p{margin:0!important;line-height:1.32!important}
-  .journey-card:nth-child(n+7){display:none!important}
-  .journey-grid.show-all .journey-card:nth-child(n+7){display:grid!important}
-  .mobile-experience-toggle{
+.mobile-experience-toggle{
     display:block;
     width:100%;
     margin:16px 0 4px;
@@ -966,5 +964,16 @@ img, video, iframe {
 @media(max-width:360px){
   .experience-grid{
     grid-template-columns:1fr!important;
+  }
+}
+
+/* V4.3 — experience expander conflict fix */
+@media(max-width:800px){
+  .experience-grid .journey-card{
+    display:grid!important;
+  }
+  .experience-grid .journey-card.is-hidden,
+  .experience-grid .journey-card.mobile-truncated{
+    display:none!important;
   }
 }

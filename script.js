@@ -39,7 +39,7 @@ pins.forEach(btn=>btn.addEventListener('click',()=>{
 
 const yearCopy={
  all:["Across KCA","Experiences that shape a KCA childhood","From local visits to major performances, every phase brings new opportunities to explore, create, perform, lead and belong."],
- nursery:["Nursery","The journey begins with belonging","Our youngest children begin by building relationships, confidence and curiosity — learning alongside the wider KCA and Frank Barnes community."],
+ nursery:["Nursery","The journey begins with belonging","Our youngest children build confidence and curiosity through play, performance and memorable first-hand experiences, including theatre, hatching and wider KCA opportunities."],
  reception:["Reception","Confidence, curiosity and independence","Reception widens children's world through performance, swimming, BSL and a growing sense of themselves as learners."],
  year1:["Year 1","Discovering the world just beyond the school gates","Food, farming, community, nature and the local area become part of children's first Key Stage 1 learning journeys."],
  year2:["Year 2","Culture, history and change come to life","Food tasting, Victorian Day and explorations of how King’s Cross has changed sit alongside wider visits and experiences across London."],
