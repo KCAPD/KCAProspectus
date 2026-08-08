@@ -1,11 +1,8 @@
-KCA Digital Prospectus V2.4
+KCA Digital Prospectus V2.5
 
-Major change:
-- Removed the illustrated map completely.
-- Replaced it with an interactive Nursery–Year 6 experience journey.
-- Parents can filter the experience cards by Nursery, Reception, Year 1–6 or Whole School.
-- Mobile uses a horizontally scrolling year selector and swipeable experience cards.
-- Includes Google Reference School, BSL/Frank Barnes, curriculum visits, LAMDA, instrumental tuition, swimming, Bright Futures, Arts Week, Year 6 production and the France residential.
-- Keeps a direct route into the full Curriculum mini-site for parents who want every unit and Big Question.
-
-Upload index.html, styles.css and script.js together, retaining the assets folder.
+Experience journey tidy-up:
+- Added a clear border/frame around the filtered experience area.
+- Standardised experience-card dimensions.
+- Desktop now uses a consistent 3-column grid, designed to show two rows at a time.
+- Additional filtered experiences remain available by scrolling within the framed area.
+- Tablet/mobile layouts remain responsive; 2 columns where space permits and 1 column on small phones.

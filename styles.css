@@ -94,3 +94,29 @@
  .journey-footer{display:block;padding:26px 0 0}
  .journey-footer .button{margin-top:18px}
 }
+
+/* V2.5 experience browser tidy-up */
+.experience-frame{border:2px solid #d7cec0;border-radius:28px;padding:30px;background:#fbf8f2}
+.experience-frame .year-summary{padding-top:4px}
+.experience-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch}
+.journey-card,.journey-card.feature{grid-column:span 1;min-height:260px;height:100%;align-items:flex-start}
+.journey-card>div{display:flex;flex-direction:column;height:100%}
+.journey-card p{flex:1}
+.journey-footer{margin-top:28px}
+@media(min-width:801px){
+ .experience-grid{max-height:570px;overflow-y:auto;padding-right:7px}
+ .experience-grid::-webkit-scrollbar{width:8px}
+ .experience-grid::-webkit-scrollbar-thumb{background:#cfc8bb;border-radius:999px}
+}
+@media(max-width:800px){
+ .experience-frame{padding:22px 18px;border-radius:22px}
+ .experience-grid{display:grid;grid-template-columns:1fr 1fr;overflow:visible;margin:0;padding:0;gap:10px;max-height:none}
+ .journey-card,.journey-card.feature{min-width:0;min-height:285px;padding:18px;display:block}
+ .journey-icon{display:block;margin-bottom:12px;text-align:left;width:auto}
+ .journey-card h3{font-size:1.12rem}
+ .journey-card p{font-size:.88rem}
+}
+@media(max-width:520px){
+ .experience-grid{grid-template-columns:1fr}
+ .journey-card,.journey-card.feature{min-height:235px}
+}
