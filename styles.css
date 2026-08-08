@@ -313,3 +313,31 @@
 /* V3.4 final hierarchy refinements */
 .destinations h2{max-width:980px;margin-bottom:26px}
 .destination-intro{margin-top:0}
+
+/* v3.6: consistent experience-card treatment */
+.journey-card,
+.journey-card.feature {
+  background: #fff !important;
+  color: var(--ink) !important;
+}
+.journey-card.feature h3,
+.journey-card.feature p,
+.journey-card.feature small {
+  color: inherit !important;
+}
+
+/* v3.7 — unified secondary-destination evidence panel */
+.destination-evidence-panel{
+  margin-top:42px;
+  padding:32px;
+  background:#fff;
+  border:1px solid #dce4e8;
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(23,32,51,.045);
+}
+.destination-evidence-panel .destination-grid-heading{margin-top:0}
+.destination-evidence-panel .destination-scroll{margin-top:20px}
+.destination-evidence-panel .destination-breadth{margin:28px 0 0;max-width:none}
+@media(max-width:760px){
+  .destination-evidence-panel{padding:20px;border-radius:20px;margin-top:30px}
+}
